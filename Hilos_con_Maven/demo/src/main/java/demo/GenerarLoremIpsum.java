@@ -17,7 +17,7 @@ public class GenerarLoremIpsum implements Runnable {
     @Override
     public void run() {
         try {
-            String loremIpsum = StringUtils.repeat("Lorem ipsum dolor sit amet, consectetur adipiscing elit. ", 100);
+            String loremIpsum = StringUtils.repeat("Lorem ipsum dolor sit amet, consectetur adipiscing elit. \n", 50);
             File archivo = new File(ruta);
             FileUtils.writeStringToFile(archivo, loremIpsum, "UTF-8");
             System.out.println("Se ha generado el archivo: " + ruta);

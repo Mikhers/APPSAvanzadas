@@ -1,14 +1,16 @@
 package demo;
-import java.util.concurrent.*;
-
+import org.fusesource.jansi.AnsiConsole;
+//import java.util.concurrent.*;
 // Clase para imprimir "Tick Tack" cada 3 segundos
 public class ImprimirTickTack implements Runnable {
     @Override
     public void run() {
         try {
             while (true) {
-                System.out.println("Tick Tack");
-                TimeUnit.SECONDS.sleep(3);
+                AnsiConsole.systemInstall();
+                System.out.println("\u001B[31mTick Tack");
+                Thread.sleep(2500); // espera 2,5 segundos
+                AnsiConsole.systemUninstall();
             }
         } catch (InterruptedException e) {
             e.printStackTrace();

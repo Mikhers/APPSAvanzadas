@@ -45,6 +45,13 @@
         <version>3.12.0</version>
     </dependency>
 
+    <dependency>
+        <groupId>org.fusesource.jansi</groupId>
+        <artifactId>jansi</artifactId>
+        <version>1.18</version>
+    </dependency>
+
+
 
   </dependencies>
 
