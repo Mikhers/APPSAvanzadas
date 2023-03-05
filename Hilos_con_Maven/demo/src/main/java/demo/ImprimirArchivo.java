@@ -24,7 +24,7 @@ public class ImprimirArchivo implements Runnable {
             for (String linea : lineas) {
                 AnsiConsole.systemInstall();
                 // System.out.println(linea);
-                System.out.println(ansi().fg(Color.BLUE).a(linea).reset()); // Imprime el texto en azul
+                System.out.println("\t\t\t\t\t\t\t"+ansi().fg(Color.BLUE).a(linea).reset()); // Imprime el texto en azul
                 AnsiConsole.systemUninstall();
                 Thread.sleep(2500); // espera 2,5 segundos
             }
