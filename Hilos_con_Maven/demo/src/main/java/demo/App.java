@@ -10,7 +10,10 @@ public class App {
         // Hilo para generar un archivo txt con un Lorem Ipsum
         Thread hilo3 = new Thread(new GenerarLoremIpsum("loremipsum.txt"));
         // Hilo para imprimir "Tick Tack" cada 3 segundos
-        Thread hilo4 = new Thread(new ImprimirTickTack());
+        // Thread hilo4 = new Thread(new ImprimirTickTack());
+
+
+        Thread hilo4 = new Thread(new AnimacionCirculo());
 
         // Iniciar los hilos
         hilo1.start();
