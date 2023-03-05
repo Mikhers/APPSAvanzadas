@@ -1,7 +1,6 @@
 package demo;
 import org.fusesource.jansi.AnsiConsole;
-//import java.util.concurrent.*;
-// Clase para imprimir "Tick Tack" cada 3 segundos
+
 public class ImprimirTickTack implements Runnable {
     @Override
     public void run() {
