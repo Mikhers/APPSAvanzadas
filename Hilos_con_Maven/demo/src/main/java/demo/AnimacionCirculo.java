@@ -1,11 +1,9 @@
 package demo;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
-// import java.awt.Point;
-// import java.awt.Toolkit;
 import javax.swing.JFrame;
-
 import javax.swing.JPanel;
 
 public class AnimacionCirculo extends Thread {
@@ -44,20 +42,28 @@ public class AnimacionCirculo extends Thread {
 
     @Override
     public void run() {
+        panel.repaint();
+        try {
+            Thread.sleep(22200); // espera 22 segundos en lo que empieza la canción xd
+            
+        } catch (Exception e) {              
+            e.printStackTrace();
+
+        }
         while (true) {
             x += dx;
             y += dy;
-
+            
             if (x + RADIO * 2.2 > ANCHO || x < 0) {
                 dx *= -1;
             }
-
+            
             if (y + RADIO * 2.8 > ALTO || y < 0) {
                 dy *= -1;
             }
-
+            
             panel.repaint();
-
+            
             try {
                 Thread.sleep(DELAY);
             } catch (InterruptedException e) {
